@@ -1,0 +1,20 @@
+name: Second Workflow
+on: push
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                 node-version: 24
+                 cache: npm
+            - name: install dependency
+              run: nnpm run build
+
+  
+
+
+
+
+              
