@@ -6,11 +6,15 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
               with:
-                 node-version: 24
-                 cache: npm
+                node-version: '20' # or your desired version
+                cache: 'npm'       # or 'yarn' / 'pnpm'
+
             - name: install dependency
-              run: nnpm run build
+              run: npm run build
 
   
 
