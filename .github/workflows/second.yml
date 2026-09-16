@@ -13,10 +13,11 @@ jobs:
                 node-version: '20' # or your desired version
                 cache: 'npm'       # or 'yarn' / 'pnpm'
 
-            - name: install dependency
-              run: npm run build
+            - name: Install dependencies
+              run: npm ci
 
-  
+            - name: Build project
+              run: npm run build
 
 
 
